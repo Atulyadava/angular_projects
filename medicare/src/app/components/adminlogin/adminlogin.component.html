@@ -1,0 +1,16 @@
+<div>
+    <h1>Enter admin credentials</h1>
+    <form>
+        <div class="form-inline">
+            <label for="text"><h2>User Name</h2> </label>
+            <input type="text" placeholder="Enter name" class="form-control" #name>
+        </div>
+        <div class="form-inline">
+            <label for="text"><h2>User Password</h2> </label>
+            <input type="password" placeholder="Enter password" class="form-control" #password>
+        </div>
+        <div>
+            <input type="submit" value="Login" class="btn btn-success" (click)="adminlogin(name.value,password.value)">
+        </div>
+    </form>
+</div>

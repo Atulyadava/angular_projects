@@ -1,0 +1,14 @@
+
+<form>
+    <div class="form-inline">
+        <label for="text"><h2>User Name</h2> </label>
+        <input type="text" placeholder="Enter name" class="form-control" #name>
+    </div>
+    <div class="form-inline">
+        <label for="text"><h2>Set new Password</h2> </label>
+        <input type="password" placeholder="Enter password" class="form-control" #password>
+    </div>
+    <div>
+        <input type="submit" value="Set New Password" class="btn btn-success" (click)="login(name.value,password.value)">
+    </div>
+   

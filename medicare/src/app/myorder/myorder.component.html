@@ -1,0 +1,28 @@
+<h1>welcone to {{orderItem.name}}</h1>
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{orderItem.id}}</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{orderItem.name}}</td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td>{{orderItem.price}}</td>
+        </tr>
+        <tr>
+            <th>Category</th>
+            <td>{{orderItem.category}}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{orderItem.descr}}</td>
+        </tr>
+
+        <button class="btn btn-success"
+        (click)="payment()">payment</button>
+    </tbody>
+</table>

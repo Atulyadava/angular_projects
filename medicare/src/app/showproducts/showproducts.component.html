@@ -1,0 +1,20 @@
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th><th>Name</th><th>Price</th><th>Category</th><th>Description</th><th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of product">
+            <td>{{u.id}}</td>
+            <td>{{u.name}}</td>
+            <td>{{u.price}}</td>
+            <td>{{u.category}}</td>
+            <td>{{u.descr}}</td>
+            <td>
+                <button class="btn btn-danger"
+                (click)="onDetete(u.id)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,92 @@
+<div class="d-flex justify-content-around py-3">
+  <div style="text-align:left;">
+    <h1>Category</h1>
+    <label>
+        <button class="btn btn-success" (click)="southIndian()">southIndian</button><br>
+        
+        <button class="btn btn-danger" (click)="chinese()">chinese</button><br>
+        <button class="btn btn-primary" (click)="thai()">thai food</button><br>
+    </label>
+</div>
+
+
+<div>
+  <button class="btn btn-primary" (click)="goToCart()">
+    <div style="font-size: 10px;" class="badge btn-danger">{{totalItem}}</div>
+    🛒 your cart </button>
+</div>
+</div>
+<div class="row">
+    <div class="col-md-6 offset-3">
+    <form>
+            <input type="text" class="form-control" placeholder="search medition" #Pname> 
+
+            <button class="btn btn-success" (click)="searchProd(Pname.value)" >search</button>
+    </form>
+   
+</div>
+</div>
+<br>
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+       <a>
+        <img src="../assets/all.jpg" alt="">
+        <h6>all food</h6>
+       </a>
+    </div>
+    <div class="item">
+      <a>
+        <img src="../assets/south.jpg" alt="">
+        <h6>south Indian</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a>
+        <img src="../assets/thai.jpg" alt="">
+        <h6>thai food</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a>
+        <img style="width: 90px;" src="../assets/chainese.jpg" alt="">
+        <h6>chainese</h6>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let sitem of ProductsByName">
+      <div *ngIf="(Pname.value==sitem.name)">
+      <div class="card col-md-3"> 
+        <h5>{{sitem.name}}</h5>
+        <p>{{sitem.descr}}</p>
+        <p><strong>Price:</strong>$ {{sitem.price}}</p>
+        <h5>{{sitem.category}}</h5>
+        <button class="btn btn-primary" (click)="addTocart(sitem)">Add to cart</button>
+     </div>
+    </div>
+  </div> 
+  </div>
+  </div>
+
+  <hr>
+
+<div class="container">
+<div class="row">
+  <ng-container *ngFor="let item of productList">
+    <div class="card col-md-3">
+      <h5>{{item.name}}</h5>
+      <p>{{item.descr}}</p>
+      <p><strong>Price:</strong>$ {{item.price}}</p>
+      <h5>{{item.category}}</h5>
+      <button class="btn btn-primary" (click)="addTocart(item)">Add to cart</button>
+   </div>
+  </ng-container>
+  
+</div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,20 @@
+.border{
+    padding-left: 2px;
+    padding-bottom: 3px;
+    padding-right: 2px;
+}
+
+.add-employee{
+display: flex;
+justify-content: center;
+}
+
+.search-employee {
+border-radius: 1rem;
+box-shadow: 0px 0px 10px rgba(34, 34, 34, 0.5);
+}
+
+.search-employee input{
+    border-radius: 1rem;
+    font-size: 1rem;
+    }

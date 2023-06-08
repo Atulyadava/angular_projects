@@ -1,0 +1,9 @@
+<div class="my-3">
+    <h5 [class]="{'strick': !todo.active}">{{todo.titel}}</h5>
+    <h6 [class]="{'strick':!todo.active}">{{todo.desc}}</h6>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="onCheckBoxClick(todo)" [checked]="!todo.active">
+        <label class="form-check-label" for="exampleCheck1{{i}}">Mark As Done</label>
+      </div>
+    <button class="btn btn-sm btn-danger" (click)="ontClick(todo)">delete</button>
+</div>

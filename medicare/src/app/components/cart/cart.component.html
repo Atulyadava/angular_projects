@@ -1,0 +1,56 @@
+<ng-container *ngIf="products.length!=0">
+<div class="container">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>product Name</th>
+                        <th>Description</th>
+                        <th>price</th> 
+                        <th>Category</th>
+                        <th>Action</th>
+                        <th>Order</th>
+                    </tr>              
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of products,let i =index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.descr}}</td>
+                        <td>${{item.price}}</td>
+                        <td>{{item.category}}</td>
+                        <td>
+                            <button (click)="removeItem(item)" class="btn btn-danger"> <i class="fas fa-trash-alt"></i> Detete</button>
+                        </td>
+                        <td>
+                            <a routerLink="/myorder/{{item.id}}">
+                                <button class="btn btn-success">Order</button>
+                                </a>
+                           
+                        </td>
+
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</ng-container>
+
+<ng-container *ngIf="products.length==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-titel">My Card</h5>
+        </div>
+        <div class="center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToIY-nAmlehbzPpM9u2gR8H1fYs7xRB1Rhb4V603UQ2w&s" alt="">
+            <h4>Your Cart is Empty!</h4>
+            <h6>add item to it now</h6>
+            <button routerLink="/homeproducts" class="btn btn-primary">shop now</button>
+        </div>
+    </div>
+    
+</ng-container> 

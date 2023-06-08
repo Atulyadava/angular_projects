@@ -1,0 +1,94 @@
+<div>
+    <main >
+        <div class="toolbar d-flex justify-content-between ">  
+          <div class="add-employee">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add Employee
+              </button>
+              
+              
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Enter Employee Details</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="row">
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="First Name">
+                          </div>
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="Last Name">
+                          </div>
+                        </div>
+                        <div class="row">
+                         <div class="col">
+                            <h3 class="text-secondary fst-italic">Persnal Information</h3>
+                         </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Birthdate</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                              <h6>Gendar</h6>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label" for="validationFormCheck2">Male</label>
+                                        <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <label class="form-check-label" for="validationFormCheck2">female</label>
+                                        <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="text-secondary fst-italic">Eduction</h3>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                               <select class="form-select" *ngFor="let item of eductionOption">
+                                <option value="#" >{{item}}</option>
+                                
+                                
+                            </select>
+                            </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Insert</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+          <div class="search-employee">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="employees">
+        <div class="row mt-5">
+            <div class="col text-center">
+               <span class="text-secondary fs-2 fw-bold fst-italic"> there is no employee Added !</span>
+            </div>
+        </div>
+        </div>
+      </main>
+</div>
+
+
+<!-- Button trigger modal -->
